@@ -70,8 +70,7 @@ Run the following commands can generate results for each setting.
 ### Citation
 <pre>
 @article{DBLP:journals/tkdd/YaoL24,
-  author       = {Kai{-}Lang Yao and
-                  Wu{-}Jun Li},
+  author       = {Kai{-}Lang Yao and Wu{-}Jun Li},
   title        = {Asymmetric Learning for Graph Neural Network based Link Prediction},
   journal      = {{ACM} Transactions on Knowledge Discovery from Data},
   volume       = {18},
