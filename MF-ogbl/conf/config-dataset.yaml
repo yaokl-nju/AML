@@ -1,0 +1,86 @@
+ogbl-ddi:
+  epochs: 400
+  early_stopping: 0
+  lamda: 0
+  layer_num: 2              # number of GNN layers
+  bn: true
+  drop: 0.3
+  eval_step: 20
+  lrscheduler: true
+  lr: 0.005
+  eval_metric: 'hits'
+  use_feature: false        # if need to generate node embedding, set false
+  use_mf_embedding: false
+  use_node2vec: false
+  pre_encode: false         # whether use pre-encode feature as inputs
+  node_emb: 512             # if node_emb > 0 learn node embedding else use feature
+  margin: 0
+  use_graph_edges: false
+  lossfunc: pairwise        # ['pairwise', 'ce']
+  directed: false
+
+ogbl-collab:
+  epochs: 400
+  early_stopping: 0
+  lamda: 0
+  layer_num: 3
+  bn: true
+  drop: 0
+  eval_step: 20
+  lrscheduler: true
+  lr: 0.001
+  eval_metric: 'hits'
+  use_feature: true
+  use_mf_embedding: false
+  use_node2vec: false   # default feature dimension is 128.
+  pre_encode: false
+  node_emb: 0
+  use_valedges_as_input: true
+  margin: 0
+  use_graph_edges: false
+  lossfunc: pairwise
+  directed: false
+
+ogbl-ppa:
+  epochs: 50      # pre-encode: 50, no pre-encode: 400
+  early_stopping: 0
+  lamda: 0
+  layer_num: 3
+  bn: true
+  drop: 0
+  eval_step: 2
+  lrscheduler: true
+  lr: 0.01
+  eval_metric: 'hits'
+  use_feature: false
+  use_mf_embedding: false
+  node_emb: 128             # if not use_feature and not use_mf_embedding and not use_node2vec and node_emb > 0, then we learn node embeddings.
+  use_node2vec: false
+  pre_encode: false
+  use_valedges_as_input: false
+  margin: 0.0
+  use_graph_edges: false
+  lossfunc: pairwise
+  directed: false
+
+ogbl-citation2:
+  epochs: 50   # pre-encode: 50, no pre-encode: 100
+  early_stopping: 0
+  lamda: 0.00001
+  layer_num: 3
+  bn: true
+  drop: 0
+  eval_step: 2
+  lrscheduler: true
+  lr: 0.005
+  eval_metric: 'mrr'
+  use_feature: true
+  use_mf_embedding: false
+  use_node2vec: false
+  pre_encode: false
+  node_emb: 0
+  use_valedges_as_input: false
+  margin: 0.0
+  use_graph_edges: false
+  lossfunc: pairwise
+  directed: true

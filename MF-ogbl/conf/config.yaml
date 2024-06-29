@@ -1,0 +1,17 @@
+gpu_id: 2
+#dataset: ogbl-ddi
+#dataset: ogbl-collab
+dataset: ogbl-ppa
+#dataset: ogbl-citation2
+
+method: FULL
+bsize: 131072   # [32*1024: 32768, 64*1024: 65536, 128*1024: 131072, 256*1024: 262144]
+
+hidden_dim: 256              # 512 for ogbl-ddi, 256 for others
+optimizer: 'adam'
+lrschedular: 'Cosine'
+root: '/data/ssd/yaokl/ogbl'
+repeat: 5
+fast_version: false
+save: true
+seed: 12345

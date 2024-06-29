@@ -1,0 +1,75 @@
+ogbl-ddi:
+  epochs: 400
+  early_stopping: 0
+  lamda: 0
+  layer_num: 2    # number of GNN layers
+  bn: true
+  eval_step: 20
+  lrscheduler: true
+  lr: 0.005
+  eval_metric: 'hits'
+  use_feature: false
+  node_emb: 512             # >0: use node_emb
+  use_mf_embedding: false   # if not use_feature and not use_mf_embedding and node_emb > 0, then we learn node embeddings.
+  use_valedges_as_input: false
+  margin: 0
+  lossfunc: pairwise
+  directed: false
+  num_neg: 1
+
+ogbl-collab:
+  epochs: 400
+  early_stopping: 0
+  lamda: 0
+  layer_num: 3    # number of GNN layers
+  bn: true
+  eval_step: 20
+  lrscheduler: true
+  lr: 0.001
+  eval_metric: 'hits'
+  use_feature: true
+  node_emb: 0               # >0: use node_emb
+  use_mf_embedding: false   # if not use_feature and not use_mf_embedding and node_emb > 0, then we learn node embeddings.
+  use_valedges_as_input: true
+  margin: 0
+  lossfunc: pairwise
+  directed: false
+  num_neg: 1
+
+ogbl-ppa:
+  epochs: 50
+  early_stopping: 0
+  lamda: 0
+  layer_num: 3    # number of GNN layers
+  bn: true
+  eval_step: 2
+  lrscheduler: true
+  lr: 0.01
+  eval_metric: 'hits'
+  use_feature: true
+  node_emb: 128           # >0: use node_emb
+  use_mf_embedding: true  # if not use_feature and not use_mf_embedding and node_emb > 0, then we learn node embeddings.
+  use_valedges_as_input: false
+  margin: 0.0
+  lossfunc: pairwise
+  directed: false
+  num_neg: 1
+
+ogbl-citation2:
+  epochs: 50
+  early_stopping: 0
+  lamda: 0
+  layer_num: 3    # number of GNN layers
+  bn: true
+  eval_step: 2
+  lrscheduler: true
+  lr: 0.005
+  eval_metric: 'mrr'
+  use_feature: true
+  node_emb: 0               # >0: use node_emb
+  use_mf_embedding: false   # if not use_feature and not use_mf_embedding and node_emb > 0, then we learn node embeddings.
+  use_valedges_as_input: false
+  margin: 0.0
+  lossfunc: ce    # ce, pairwise
+  directed: true
+  num_neg: 1

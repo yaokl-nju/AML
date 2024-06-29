@@ -1,0 +1,21 @@
+gpu_id: 3
+#dataset: ogbl-ddi
+dataset: ogbl-collab
+#dataset: ogbl-ppa
+#dataset: ogbl-citation2
+
+model: SAGE
+method: BNS
+method_te: FULL
+bsize: 131072   # 32*1024: 32768, 64*1024: 65536, 128*1024: 131072
+strategy: asymmetric   # ALGNN: asymmectric. GAE: symmetric
+reverse: true # false: head-gnn, tail-mlp. true: head-mlp, tail-gnn.
+
+hidden_dim: 256              # 512 for ogbl-ddi, 256 for others
+optimizer: 'adam'
+lrschedular: 'Cosine'
+root: '/data/ssd/yaokl/ogbl'
+repeat: 5
+fast_version: false   # running time is calculated with single thread. If we enable this option, faster training speed can be obtained.
+save: false
+seed: 12345

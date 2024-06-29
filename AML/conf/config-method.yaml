@@ -1,0 +1,35 @@
+BNS:
+  ogbl-ddi:
+    s_n_1: 5
+    s_n: 2
+    rho: 2
+    s_n_1_te: 5
+    s_n_te: 2
+  ogbl-ppa:
+    s_n_1: -1   # 32 or -1
+    s_n: 4
+    rho: 5      # 5
+    s_n_1_te: -1
+    s_n_te: 4
+  ogbl-collab:
+    s_n_1: 7
+    s_n: 2
+    rho: 1
+    s_n_1_te: 7
+    s_n_te: 2
+  ogbl-citation2:
+    s_n_1: 7
+    s_n: 2
+    rho: 1
+    s_n_1_te: 7
+    s_n_te: 2
+
+FULL:
+  ogbl-ddi:
+    bn: true
+  ogbl-ppa:
+    bn: true
+  ogbl-collab:
+    bn: true
+  ogbl-citation2:
+    bn: true
